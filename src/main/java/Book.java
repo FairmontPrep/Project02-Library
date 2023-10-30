@@ -1,3 +1,5 @@
+package src.main.java;
+
 public class Book {
     private String title;
     private String author;
@@ -21,5 +23,12 @@ public class Book {
      */
     public String getTitle() {
         return title;
+    }
+
+    /*
+     * @return number of copies
+     */
+    public int numOfCopies() {
+        return numOfCopies;
     }
 }

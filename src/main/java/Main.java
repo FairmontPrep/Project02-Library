@@ -2,9 +2,8 @@
  * "Class and period"
  * "Date"
  */
-
+package src.main.java;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 class Main {
     private static final Scanner scanner = new Scanner(System.in);      // Creates a scanner to read inputs
@@ -12,7 +11,7 @@ class Main {
     public static void main(String[] args) {
         boolean run = true;
         while (run) {
-            System.out.println("\nWelcome to my Application!\n");
+            System.out.println("\nWelcome to the FPA Library\n");
             System.out.println("1. print all titles");
             System.out.println("2. Quit");
             System.out.print("Please select an option: ");
@@ -23,7 +22,7 @@ class Main {
                     library.printAllTitles();
                     break;
                 case "2":
-                    System.out.println("Application is closing now. Bye!");
+                    System.out.println("Thank you for visiting FPA's library, bye!");
                     run = false;
                     break;
                 default:

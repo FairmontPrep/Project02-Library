@@ -1,3 +1,4 @@
+package src.main.java;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -30,7 +31,7 @@ public class Library {
         new Book("The Picture of Dorian Gray", "Oscar Wilde", "Gothic Fiction", 254, 3),
         new Book("The Grapes of Wrath", "John Steinbeck", "Social Commentary", 464, 5),
         new Book("Great Expectations", "Charles Dickens", "Literary Fiction", 505, 9),
-        new Book("Wuthering Heights", "Emily Brontë", "Gothic Fiction", 342, 1),
+        new Book("Wuthering Heights", "Emily Brontë", "Gothic Fiction", 342, 0),
         new Book("The Odyssey", "Homer", "Epic Poetry", 442, 4),
         new Book("A Tale of Two Cities", "Charles Dickens", "Historical Fiction", 341, 7),
         new Book("The Divine Comedy", "Dante Alighieri", "Epic Poetry", 798, 1),
@@ -38,14 +39,14 @@ public class Library {
         new Book("Gulliver's Travels", "Jonathan Swift", "Satire", 306, 2),
         new Book("Alice's Adventures in Wonderland", "Lewis Carroll", "Fantasy", 200, 5),
         new Book("The War of the Worlds", "H.G. Wells", "Science Fiction", 192, 2),
-        new Book("The Count of Monte Cristo", "Alexandre Dumas", "Adventure", 1276, 1),
+        new Book("The Count of Monte Cristo", "Alexandre Dumas", "Adventure", 1276, 0),
         new Book("Les Misérables", "Victor Hugo", "Historical Fiction", 1463, 4),
         new Book("Dracula", "Bram Stoker", "Gothic Horror", 418, 1),
         new Book("Sense and Sensibility", "Jane Austen", "Romance", 409, 1),
         new Book("A Christmas Carol", "Charles Dickens", "Gothic Fiction", 104, 14),
         new Book("The Adventures of Sherlock Holmes", "Arthur Conan Doyle", "Mystery", 239, 8),
         new Book("Don Quixote", "Miguel de Cervantes", "Satire", 863, 3),
-        new Book("Anna Karenina", "Leo Tolstoy", "Romantic Tragedy", 964, 1),
+        new Book("Anna Karenina", "Leo Tolstoy", "Romantic Tragedy", 964, 0),
         new Book("The Scarlet Letter", "Nathaniel Hawthorne", "Gothic Romance", 238, 10),
         new Book("Oliver Twist", "Charles Dickens", "Social Commentary", 608, 13),
         new Book("The Canterbury Tales", "Geoffrey Chaucer", "Poetry", 504, 2),
@@ -54,7 +55,7 @@ public class Library {
         new Book("The Sun Also Rises", "Ernest Hemingway", "Modernist Literature", 251, 2),
         new Book("The Sound and the Fury", "William Faulkner", "Modernist Literature", 326, 5),
         new Book("A Clockwork Orange", "Anthony Burgess", "Dystopian", 213, 7),
-        new Book("Slaughterhouse-Five", "Kurt Vonnegut", "Satire", 275, 1),
+        new Book("Slaughterhouse-Five", "Kurt Vonnegut", "Satire", 275, 0),
         new Book("Catch-22", "Joseph Heller", "Satire", 453, 4),
         new Book("The Handmaid's Tale", "Margaret Atwood", "Dystopian", 311, 18),
         new Book("The Hitchhiker's Guide to the Galaxy", "Douglas Adams", "Science Fiction", 193, 4),
@@ -87,12 +88,14 @@ public class Library {
     }
 
     /*
-     * Prints the title of all books in the library
+     * Prints the title of all books in the library with its number of copies
      */
     public void printAllTitles() {
         System.out.println("");
+        System.out.printf("%-40s%-6s\n", "Title", "Copies");
+        System.out.println("-----------------------------------------------");
         for (Book book : database) {
-            System.out.println(book.getTitle());
+            System.out.printf("%-40s%6d\n", book.getTitle(), book.numOfCopies());
         }
     }
 }
